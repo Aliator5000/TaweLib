@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CustomerPageController">
+    <VBox GridPane.columnIndex="0" GridPane.rowIndex="1" spacing="20">
+        <Button fx:id="borrowed" text="Borrowed" minWidth="50" minHeight="20" onAction="#borrowed"/>
+        <Button fx:id="reserved" text="Reserved" minWidth="50" minHeight="20" onAction="#reserved"/>
+        <Button fx:id="requested" text="Requested" minWidth="50" minHeight="20" onAction="#requested"/>
+        <Button fx:id="history" text="History" minWidth="50" minHeight="20" onAction="#history"/>
+    </VBox>
+    <ListView fx:id="listViewResources" orientation="vertical" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+    <Label fx:id="label" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+    <HBox spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="2">
+        <Button fx:id="select" minHeight="20" minWidth="50" onAction="#borrow" text="Borrow" />
+        <Button fx:id="checkQueue" minHeight="20" minWidth="50" onAction="#checkQueue" text="Check Queue" />
+    </HBox>
+    <VBox spacing="10" GridPane.columnIndex="2" GridPane.rowIndex="1">
+        <ComboBox fx:id="searchType" minHeight="20" minWidth="50" />
+        <TextField fx:id="searchText" minHeight="20" minWidth="50" />
+        <Button fx:id="search" minHeight="20" minWidth="50" onAction="#search" text="Search" />
+    </VBox>
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>

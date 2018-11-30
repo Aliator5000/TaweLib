@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+
+<GridPane vgap="20" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LoginPageController">
+    <padding><Insets top="200" right="40" bottom="40" left="100"/></padding>
+    <ComboBox minHeight="20" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Librarian" />
+                <String fx:value="Customer" />
+            </FXCollections>
+        </items>
+    </ComboBox>
+    <TextField fx:id="username" minHeight="30" minWidth="300" GridPane.columnIndex="1" GridPane.rowIndex="2" promptText="Username"/>
+    <HBox spacing="20" GridPane.rowIndex="3" GridPane.columnIndex="1">
+        <Button fx:id="loginButton" minHeight="20" minWidth="150" text="Login" onMouseClicked="#loginButtonHandler"/>
+        <Button minHeight="20" minWidth="150" text="Forgot Password"/>
+    </HBox>
+</GridPane>

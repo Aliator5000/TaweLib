@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CustomerPageController">
+    <ListView fx:id="listViewResources" orientation="vertical" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <Button fx:id="button" minHeight="20" minWidth="50" onAction="#doSomething" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+    <Label fx:id="label" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <HBox spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="2">
+        <Button fx:id="select" minHeight="20" minWidth="50" onAction="#borrow" text="Borrow" />
+        <Button fx:id="checkQueue" minHeight="20" minWidth="50" onAction="#checkQueue" text="Check Queue" />
+    </HBox>
+    <VBox spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <ComboBox fx:id="searchType" minHeight="20" minWidth="50" />
+        <TextField fx:id="searchText" minHeight="20" minWidth="50" />
+        <Button fx:id="search" minHeight="20" minWidth="50" onAction="#search" text="Search" />
+        <Button fx:id="uselessButton" onAction="#uselessButtonHandler" text="useless"/>
+    </VBox>
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+    </rowConstraints>
+</GridPane>
